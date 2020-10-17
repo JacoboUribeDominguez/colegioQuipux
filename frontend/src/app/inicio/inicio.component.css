@@ -1,0 +1,17 @@
+.buttonStudents
+{
+    border:none; 
+    border-radius: 5px; 
+    color:white;
+    width:65%;
+}
+
+.buttonStudents-r
+{
+    background: #241a35;
+}
+
+.buttonStudents-l
+{
+    background: #25a2ac;
+}
