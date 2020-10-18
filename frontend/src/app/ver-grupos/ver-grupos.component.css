@@ -1,0 +1,20 @@
+.veTitleContainer{
+    width:100%;
+}
+
+.btnGruposTablas{
+    border:none;
+    border-radius: 5px;
+}
+
+.btnVolver{
+    width:33.3%;
+    border:none;
+    border-radius: 5px;
+    background: #241a35;
+    color: white;
+}
+
+.btnVolver-container{
+    width:100%;
+}

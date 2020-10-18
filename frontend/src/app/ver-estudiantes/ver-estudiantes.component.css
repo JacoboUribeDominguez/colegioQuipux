@@ -1,0 +1,32 @@
+.veTitleContainer{
+    width:100%;
+}
+
+.containerDato{
+    background: #241a35;
+    color: white;
+}
+
+.containerDato2{
+    width:100%;
+    border-radius:5px;
+    background: #241a35;
+    color: white;
+}
+
+.containerDato3{
+    width:100%;
+    background:#25a2ac;
+}
+
+.btnVolver{
+    width:33.3%;
+    border:none;
+    border-radius: 5px;
+    background: #241a35;
+    color: white;
+}
+
+.btnVolver-container{
+    width:100%;
+}

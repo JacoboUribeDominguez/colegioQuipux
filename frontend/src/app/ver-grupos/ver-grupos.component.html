@@ -1,1 +1,42 @@
-<p>ver-grupos works!</p>
+<div class="container mt-5">
+    <div class="veTitleContainer d-flex flex-column align-items-center">
+        <h1>Grupos</h1>
+        <table class="table mt-5">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">codigoGrupo</th>
+                    <th scope="col">Grado</th>
+                    <th scope="col">Codigo Director De Grupo</th>
+                    <th scope="col">Jornada</th>
+                    <th scope="col">Asignaturas</th>
+                    <th scope="col">Estudiantes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>7</td>
+                    <td>1328012</td>
+                    <td>Noche</td>
+                    <td>
+                        <button class="btnGruposTablas">
+                            Asignaturas
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btnGruposTablas">
+                            Estudiantes
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btnVolver-container d-flex justify-content-center mt-4">
+            <button 
+                (click)="NavegarHaciaInicio()"
+                class='btnVolver py-2 px-3' >
+                    Volver
+            </button>
+        </div>
+    </div>
+</div>                                                                            

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ver-grupos',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerGruposComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  NavegarHaciaInicio(){
+    this.router.navigate(['/']);
   }
 
 }
