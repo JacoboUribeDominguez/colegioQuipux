@@ -1,42 +1,53 @@
 <div class="container mt-5">
     <div class="veTitleContainer d-flex flex-column align-items-center">
         <h1>Grupos</h1>
-        <table class="table mt-5">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">codigoGrupo</th>
-                    <th scope="col">Grado</th>
-                    <th scope="col">Codigo Director De Grupo</th>
-                    <th scope="col">Jornada</th>
-                    <th scope="col">Asignaturas</th>
-                    <th scope="col">Estudiantes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>7</td>
-                    <td>1328012</td>
-                    <td>Noche</td>
-                    <td>
-                        <button class="btnGruposTablas">
-                            Asignaturas
-                        </button>
-                    </td>
-                    <td>
-                        <button class="btnGruposTablas">
-                            Estudiantes
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="btnVolver-container d-flex justify-content-center mt-4">
-            <button 
-                (click)="NavegarHaciaInicio()"
-                class='btnVolver py-2 px-3' >
+        <div class="mt-5 d-flex flex-column align-items-center justify-content-center px-4 py-4" style="width:100%; border:1px solid black">
+            <h2 class="text-center mb-5">Grupo 001321</h2>
+            <div class="row" style="width:100%;">
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3" style="width:100%">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        codigoEstudiante
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        100101
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Tipo de Documento
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        T.I
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Numero de Documento
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        1001016727
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Ciudad
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        Medellín
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-6 d-flex flex-column align-items-center mb-3">
+                    <button class="btnTable">Ver Estudiantes</button>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-6 d-flex flex-column align-items-center mb-3">
+                    <button class="btnTable">Ver Estudiantes</button>
+                </div>
+            </div>
+            <div class="btnVolver-container d-flex justify-content-center mt-4">
+                <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>
                     Volver
-            </button>
+                </button>
+            </div>
         </div>
     </div>
-</div>                                                                            
+</div>
