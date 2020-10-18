@@ -30,10 +30,10 @@ const routes: Routes = [
   {path: 'editarGrupo', component:EditarGrupoComponent},
   {path: 'eliminarGrupo', component:EliminarGrupoComponent}, //endGrupo
   {path: 'verMaterias', component:VerMateriasComponent},
-  {path: 'buscarMaterias', component:BuscarMateriaComponent},
-  {path: 'agregarMaterias', component:AgregarMateriaComponent},
-  {path: 'editarMaterias', component:EditarMateriaComponent},
-  {path: 'eliminarMaterias', component:EliminarMateriaComponent}
+  {path: 'buscarMateria', component:BuscarMateriaComponent},
+  {path: 'agregarMateria', component:AgregarMateriaComponent},
+  {path: 'editarMateria', component:EditarMateriaComponent},
+  {path: 'eliminarMateria', component:EliminarMateriaComponent}
   
 ];
 

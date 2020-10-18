@@ -18,10 +18,63 @@ export class InicioComponent implements OnInit {
   }
 
   navegarHaciaBuscarEstudiante(){
-    this.router.navigate(['/buscarEstudiantes']);
+    this.router.navigate(['/buscarEstudiante']);
   }
 
   navegarHaciaAgregarEstudiante(){
-    this.router.navigate(['/agregarEstudiantes']);
+    this.router.navigate(['/agregarEstudiante']);
+  }
+
+  navegarHaciaEditarEstudiante(){
+    this.router.navigate(['/editarEstudiante']);
+  }
+
+  navegarHaciaEliminarEstudiante(){
+    this.router.navigate(['/editarEstudiante']);
+  }
+
+  //
+
+  navegarHaciaVerGrupos(){
+    this.router.navigate(['/verGrupos']);
+  }
+
+  navegarHaciaBuscarGrupo(){
+    this.router.navigate(['/buscarGrupo']);
+  }
+
+  navegarHaciaAgregarGrupo(){
+    this.router.navigate(['/agregarGrupo']);
+  }
+
+  navegarHaciaEditarGrupo(){
+    this.router.navigate(['/editarGrupo']);
+  }
+
+  navegarHaciaEliminarGrupo(){
+    this.router.navigate(['/eliminarGrupo']);
+  }
+
+  //
+
+  navegarHaciaVerMaterias(){
+    this.router.navigate(['/verMaterias']);
+  }
+
+  navegarHaciaBuscarMateria(){
+    this.router.navigate(['/buscarMateria']);
+  }
+
+  navegarHaciaAgregarMateria(){
+    this.router.navigate(['/agregarMateria']);
+  }
+
+  navegarHaciaEditarMateria(){
+    this.router.navigate(['/editarMateria']);
+  }
+
+  navegarHaciaEliminarMateria(){
+    this.router.navigate(['/eliminarMateria']);
   }
 }
+
