@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Materias } from '../model/Materias';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-ver-materias',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerMateriasComponent implements OnInit {
 
-  constructor() { }
+  materias:Materias[];
+
+  constructor(private service : ServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    this.service.getMaterias()
+    .subscribe(data => {
+      this.materias=data;
+    });
   }
 
+  NavegarHaciaInicio(){
+    this.router.navigate(['/']);
+  }
 }

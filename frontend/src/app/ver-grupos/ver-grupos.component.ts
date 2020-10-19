@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Grupo } from '../model/Grupo';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-ver-grupos',
@@ -8,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class VerGruposComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  grupos:Grupo[];
+  constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
+    this.service.getGrupos()
+    .subscribe(data => {
+      this.grupos=data;
+    });
   }
 
   NavegarHaciaInicio(){

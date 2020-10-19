@@ -1,8 +1,8 @@
 export class Estudiante{
-    codigoEstudiante: number;
-    nombreEstudiante: String;
-    tipoDocumento: String;
-    numeroDocumento: number;
+    codigo: number;
+    nombre: String;
+    tipodocumento: String;
+    numdocumento: number;
     ciudad: String;
     genero: String;
     direccion: String;
