@@ -1,15 +1,19 @@
 <div class="container mt-5">
     <div class="veTitleContainer d-flex flex-column align-items-center">
         <h1>Estudiantes</h1>
-        <div class="mt-5 d-flex flex-column align-items-center justify-content-center px-4 py-4" style="width:100%; border:1px solid black">
-            <h2 class="text-center mb-5">Jacobo Uribe</h2>
+        <div 
+            class="mt-5 d-flex flex-column align-items-center justify-content-center px-4 py-4" 
+            style="width:100%; border:1px solid black"
+            *ngFor="let estudiante of estudiantes"
+        >
+            <h2 class="text-center mb-5">{{estudiante.nombreEstudiante}}</h2>
             <div class="row" style="width:100%;">
                 <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3" style="width:100%">
                     <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
                         codigoEstudiante
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        100101
+                        {{estudiante.codigoEstudiante}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
@@ -17,7 +21,7 @@
                         Tipo de Documento
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        T.I
+                        {{estudiante.tipoDocumento}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
@@ -25,7 +29,7 @@
                         Numero de Documento
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        1001016727
+                        {{estudiante.numeroDocumento}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
@@ -33,7 +37,7 @@
                         Ciudad
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        Medellín
+                        {{estudiante.ciudad}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
@@ -41,7 +45,7 @@
                         Genero
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        Masculino
+                        {{estudiante.genero}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
@@ -49,7 +53,7 @@
                         Dirección
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        Cra 42 D # 60 sur 60
+                        {{estudiante.direccion}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
@@ -57,7 +61,7 @@
                         Telefono
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        6123568
+                        {{estudiante.telefono}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
@@ -65,7 +69,7 @@
                         Celular
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        3054332172
+                        {{estudiante.celular}}
                     </div>
                 </div>
                 <div class="containerDato col-sm-12 col-lg-4 d-flex flex-column align-items-center mb-3">
@@ -73,7 +77,7 @@
                         Correo
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        jacouribe2003@gmail.com
+                        {{estudiante.correo}}
                     </div>
                 </div>
             </div>

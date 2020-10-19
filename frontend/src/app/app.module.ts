@@ -19,6 +19,9 @@ import { AgregarMateriaComponent } from './agregar-materia/agregar-materia.compo
 import { EditarMateriaComponent } from './editar-materia/editar-materia.component';
 import { EliminarMateriaComponent } from './eliminar-materia/eliminar-materia.component';
 import { AgregarEstudianteComponent } from './agregar-estudiante/agregar-estudiante.component';
+import { FormsModule } from '@angular/forms'
+import { ServiceService } from './service/service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,9 +45,11 @@ import { AgregarEstudianteComponent } from './agregar-estudiante/agregar-estudia
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

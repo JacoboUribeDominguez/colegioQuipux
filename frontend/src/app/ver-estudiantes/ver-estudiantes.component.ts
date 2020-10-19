@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Estudiante } from '../model/Estudiante';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-ver-estudiantes',
@@ -8,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class VerEstudiantesComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  estudiantes:Estudiante[];
+  constructor(private router:Router, private service:ServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.service.getEstudiantes()
+    .subscribe(data => {
+      this.estudiantes=data;
+    });
   }
 
   NavegarHaciaInicio(){
