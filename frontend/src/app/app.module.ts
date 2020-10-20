@@ -22,6 +22,8 @@ import { AgregarEstudianteComponent } from './agregar-estudiante/agregar-estudia
 import { FormsModule } from '@angular/forms'
 import { ServiceService } from './service/service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EstudiantesGruposComponent } from './buscar-grupo/botones/estudiantes-grupos/estudiantes-grupos.component';
+import { MateriasGruposComponent } from './buscar-grupo/botones/materias-grupos/materias-grupos.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     AgregarMateriaComponent,
     EditarMateriaComponent,
     EliminarMateriaComponent,
-    AgregarEstudianteComponent
+    AgregarEstudianteComponent,
+    EstudiantesGruposComponent,
+    MateriasGruposComponent
   ],
   imports: [
     BrowserModule,

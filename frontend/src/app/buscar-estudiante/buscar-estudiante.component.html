@@ -1,1 +1,114 @@
-<p>buscar-estudiante works!</p>
+<div class="container mt-5">
+    <div class="veTitleContainer d-flex flex-column align-items-center">
+        <form 
+            class="d-flex flex-column align-items-center"
+            (ngSubmit)="onSubmit()"
+            >
+            <div class="form-group d-flex flex-column align-items-center">
+                <label for="codigo">Digite el código del estudiante</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="codigo" 
+                    aria-describedby="emailHelp" 
+                    name="codigo" 
+                    [(ngModel)]="codigo"
+                    required
+                    >
+            </div>
+            <button 
+                type="submit" 
+                class="btn btn-primary" 
+                style="width:100%; background:#241a35; border:1px solid #241a35"
+            >
+                Enviar
+            </button>
+        </form>
+        <div 
+            class="mt-5 d-flex flex-column align-items-center justify-content-center px-4 py-4" 
+            style="width:100%; border:1px solid black"
+            *ngIf="estudiante != null"
+        >
+            <h2 class="text-center mb-5">{{estudiante.nombre}}</h2>
+            <div class="row" style="width:100%;">
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3" style="width:100%">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        codigoEstudiante
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.codigo}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Tipo de Documento
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.tipodocumento}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Numero de Documento
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.numdocumento}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Ciudad
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.ciudad}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Genero
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.genero}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Dirección
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.direccion}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-2 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Telefono
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.telefono}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Celular
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.celular}}
+                    </div>
+                </div>
+                <div class="containerDato col-sm-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        Correo
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{estudiante.correo}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btnVolver-container d-flex justify-content-center mt-4 mb-4">
+            <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>
+                Volver
+            </button>
+        </div>  
+    </div>
+</div>

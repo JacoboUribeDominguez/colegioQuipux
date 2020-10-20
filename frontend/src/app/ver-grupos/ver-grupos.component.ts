@@ -24,4 +24,7 @@ export class VerGruposComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  NavegarHaciaEG(){
+    this.router.navigate(['/verGrupo/estudiantes-grupos']);
+  }
 }

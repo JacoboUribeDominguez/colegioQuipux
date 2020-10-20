@@ -16,6 +16,10 @@ export class ServiceService {
     return this.http.get<Estudiante[]>('http://localhost:8080/estudiantes/listarEstudiantes');
   }
 
+  getEstudiante(codigo: number){
+    return this.http.get<Estudiante>(`http://localhost:8080/estudiantes/buscarEstudiante/${codigo}`);
+  }
+
   getGrupos(){
     return this.http.get<Grupo[]>('http://localhost:8080/grupos/listarGrupos');
   }

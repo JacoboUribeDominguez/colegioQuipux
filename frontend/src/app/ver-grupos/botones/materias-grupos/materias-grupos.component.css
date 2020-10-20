@@ -36,3 +36,18 @@
 .btnVolver-container{
     width:100%;
 }
+
+.btnTable{
+    background:none;
+    border-radius:3px;
+    color:#25a2ac;
+    width:100%;
+    border: 1px solid #25a2ac;
+    padding: 12px 0;
+}
+
+.btnTable:hover {
+    border: 1px solid #229099;
+    background: #25a2ac;
+    color:white;
+}

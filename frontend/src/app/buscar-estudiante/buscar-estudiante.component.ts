@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Estudiante } from '../model/Estudiante';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-buscar-estudiante',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarEstudianteComponent implements OnInit {
 
-  constructor() { }
+  estudiante: Estudiante;
+  codigo = null;
+  constructor(private service:ServiceService, private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+  }
+
+  onSubmit(){
+    this.service.getEstudiante(this.codigo)
+    .subscribe(data => {
+      this.estudiante = data;
+    })
+  }
+
+  NavegarHaciaInicio(){
+    this.router.navigate(['/']);
   }
 
 }
