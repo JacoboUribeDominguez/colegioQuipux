@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Grupo } from '../model/Grupo';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-buscar-grupo',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarGrupoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private service:ServiceService) { }
+
+  codigo=null;
+  grupo: Grupo;
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    this.service.getGrupo(this.codigo)
+    .subscribe(data => {
+      this.grupo = data;
+    },
+    err => {
+      window.alert(`No se pudo encontrar el grupo ${this.codigo}`);
+    });
+  }
+
+  NavegarHaciaInicio(){
+    this.router.navigate(['/']);
   }
 
 }

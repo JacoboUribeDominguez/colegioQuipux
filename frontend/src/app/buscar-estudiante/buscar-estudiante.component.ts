@@ -21,7 +21,15 @@ export class BuscarEstudianteComponent implements OnInit {
     this.service.getEstudiante(this.codigo)
     .subscribe(data => {
       this.estudiante = data;
-    })
+    },
+    err => {
+      window.alert(`No se pudo encontrar el estudiante ${this.codigo}`);
+      this.router.navigate['/buscarEstudiante-error'];
+      /*this.toastr.error("No se ha encontrado el estudiante", 'Fail', {
+        timeOut: 3000, positionClass: 'toast-top-center',
+      });
+      
+    */})
   }
 
   NavegarHaciaInicio(){

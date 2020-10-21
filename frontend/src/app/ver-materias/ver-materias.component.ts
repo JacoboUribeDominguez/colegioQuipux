@@ -15,10 +15,25 @@ export class VerMateriasComponent implements OnInit {
   constructor(private service : ServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    this.onCharge();
+  }
+
+  onCharge(){
     this.service.getMaterias()
     .subscribe(data => {
       this.materias=data;
     });
+  }
+
+  onDelete(codigo:String){
+    alert('¿Esta seguro que desea eliminar esta materia?');
+    this.service.deleteMateria(codigo).subscribe(data => {
+      alert('Materia eliminada');
+      this.onCharge();
+    },
+    err =>{
+      alert('ERROR: No se pudo eliminar la materia');
+    })
   }
 
   NavegarHaciaInicio(){

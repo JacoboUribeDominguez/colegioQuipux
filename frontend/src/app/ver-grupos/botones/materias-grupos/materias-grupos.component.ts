@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RelacionMaetriasGrupo } from 'src/app/model/RelacionMateriasGrupo';
+import { ServiceService } from 'src/app/service/service.service';
 
 @Component({
   selector: 'app-materias-grupos',
@@ -8,12 +11,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MateriasGruposComponent implements OnInit {
 
-  id:number;
-
-  constructor(private router:Router, private activateRoute:ActivatedRoute) { }
+  grupo:number;
+  relaciones:RelacionMaetriasGrupo[];
+  constructor(private router:Router, private activateRoute:ActivatedRoute, private service:ServiceService) { }
 
   ngOnInit(): void {
-    this.id = this.activateRoute.snapshot.params.id;
+    this.grupo = this.activateRoute.snapshot.params.id;
+    this.service.getRelaciones(this.grupo)
+    .subscribe(data => {
+      this.relaciones=data;
+    });
   }
 
   VolverHaciaGrupos(){

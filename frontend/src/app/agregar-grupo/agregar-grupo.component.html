@@ -1,1 +1,44 @@
-<p>agregar-grupo works!</p>
+<div class="container mt-5">
+    <div class="veTitleContainer d-flex flex-column align-items-center">
+        <form style="width:60%">
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="grado">Grado</label>
+                    <select id="grado" class="form-control">
+                        <option selected>Selecciona...</option>
+                        <option value="6" >06</option>
+                        <option value="7" >07</option>
+                        <option value="8" >08</option>
+                        <option value="9" >09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="inputEmail4">Codigo Director Grupo</label>
+                    <input type="number" class="form-control" id="inputEmail4">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4">Jornada</label>
+                <input type="text" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <button type="submit" class="btnAsociar py-2 px-3" style="width:100%">Asociar Estudiantes</button>
+                </div>
+                <div class="form-group col-6">
+                    <button type="submit" class="btnAsociar py-2 px-3" style="width:100%">Asociar Materias</button>
+                </div>
+            </div>
+            <button type="submit" class="btnVolver py-2 px-3" style="width:100%">Agregar Estudiante</button>
+        </form>
+        <div class="btnVolver-container d-flex justify-content-center mt-4 mb-4">
+            <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>
+                Volver
+            </button>
+        </div>
+    </div>
+</div>

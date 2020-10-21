@@ -1,1 +1,84 @@
-<p>agregar-estudiante works!</p>
+<div class="container mt-5">
+    <div class="veTitleContainer d-flex flex-column align-items-center">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="tipoDocumento">Tipo de Documento</label>
+                    <select id="tipoDocumento" class="form-control">
+                        <option selected>Selecciona...</option>
+                        <option>T.I</option>
+                        <option>Cedula</option>
+                        <option>Documento de extranjero</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-7">
+                    <label for="inputEmail4">Numero de Documento</label>
+                    <input type="number" class="form-control" id="inputEmail4">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4">Nombre</label>
+                <input type="text" class="form-control" id="inputEmail4">
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Genero</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Femenino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Otro
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-row">
+                <h1>Fecha</h1>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4">Dirección</label>
+                <input type="text" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4">Ciudad</label>
+                <input type="text" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4">Telefono</label>
+                <input type="number" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4">Celular</label>
+                <input type="number" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+            </div>
+            <button type="submit" class="btnVolver py-2 px-3" style="width:100%">Agregar Estudiante</button>
+        </form>
+        <div class="btnVolver-container d-flex justify-content-center mt-4 mb-4">
+            <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>
+                Volver
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,69 @@
-<p>agregar-materia works!</p>
+<div class="container mt-5">
+    <div class="veTitleContainer d-flex flex-column align-items-center">
+        <form (ngSubmit)="onCreate()">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="codigoMateria">Codigo Materia</label>
+                    <input type="text" class="form-control" id="codigoMateria" name="codigo" [(ngModel)]="codigo">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="nombreMateria">Nombre de la materia</label>
+                    <input type="text" class="form-control" id="nombreMateria" name="nombre" [(ngModel)]="nombre">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="nombreDocente">Codigo Del Docente</label>
+                    <input type="number" class="form-control" id="nombreDocente" name="profesor" [(ngModel)]="profesor">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2">Grados</div>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="6" name="grado6" [(ngModel)]="grado6">
+                    <label class="form-check-label" for="gridCheck1">
+                      06
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="7" name="grado7"  [(ngModel)]="grado7">
+                    <label class="form-check-label" for="gridCheck1">
+                      07
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="8" name="grado8"  [(ngModel)]="grado8">
+                    <label class="form-check-label" for="gridCheck1">
+                      08
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="9" name="grado9"  [(ngModel)]="grado9">
+                    <label class="form-check-label" for="gridCheck1">
+                      09
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="10" name="grado10" [(ngModel)]="grado10">
+                    <label class="form-check-label" for="gridCheck1">
+                      10
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="11" name="grado11" [(ngModel)]="grado11">
+                    <label class="form-check-label" for="gridCheck1">
+                      11
+                    </label>
+                  </div>
+                </div>
+              </div>
+            <button type="submit" class="btnVolver py-2 px-3" style="width:100%">Agregar Materia</button>
+        </form>
+        <div class="btnVolver-container d-flex justify-content-center mt-4 mb-4">
+            <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>
+                Volver
+            </button>
+        </div>
+    </div>
+</div>

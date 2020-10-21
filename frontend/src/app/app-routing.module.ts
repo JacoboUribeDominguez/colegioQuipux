@@ -20,6 +20,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { VerEstudiantesComponent } from './ver-estudiantes/ver-estudiantes.component';
 import { VerGruposComponent } from './ver-grupos/ver-grupos.component';
 import { VerMateriasComponent } from './ver-materias/ver-materias.component';
+import { EstudianteErrorComponent } from './buscar-estudiante/error/estudiante-error/estudiante-error.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: 'buscarMateria', component:BuscarMateriaComponent},
   {path: 'agregarMateria', component:AgregarMateriaComponent},
   {path: 'editarMateria', component:EditarMateriaComponent},
-  {path: 'eliminarMateria', component:EliminarMateriaComponent}
+  {path: 'eliminarMateria', component:EliminarMateriaComponent},
+  {path: 'buscarEstudiante-error', component:EstudianteErrorComponent}
   
 ];
 

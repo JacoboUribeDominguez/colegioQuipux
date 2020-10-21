@@ -24,6 +24,7 @@ import { ServiceService } from './service/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EstudiantesGruposComponent } from './buscar-grupo/botones/estudiantes-grupos/estudiantes-grupos.component';
 import { MateriasGruposComponent } from './buscar-grupo/botones/materias-grupos/materias-grupos.component';
+import { EstudianteErrorComponent } from './buscar-estudiante/error/estudiante-error/estudiante-error.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MateriasGruposComponent } from './buscar-grupo/botones/materias-grupos/
     EliminarMateriaComponent,
     AgregarEstudianteComponent,
     EstudiantesGruposComponent,
-    MateriasGruposComponent
+    MateriasGruposComponent,
+    EstudianteErrorComponent
   ],
   imports: [
     BrowserModule,
