@@ -25,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { EstudiantesGruposComponent } from './buscar-grupo/botones/estudiantes-grupos/estudiantes-grupos.component';
 import { MateriasGruposComponent } from './buscar-grupo/botones/materias-grupos/materias-grupos.component';
 import { EstudianteErrorComponent } from './buscar-estudiante/error/estudiante-error/estudiante-error.component';
+import { RelacionMateriasComponent } from './relacion-materias/relacion-materias/relacion-materias.component';
+import { RelacionEstudiantesComponent } from './relacion-estudiantes/relacion-estudiantes/relacion-estudiantes.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { EstudianteErrorComponent } from './buscar-estudiante/error/estudiante-e
     AgregarEstudianteComponent,
     EstudiantesGruposComponent,
     MateriasGruposComponent,
-    EstudianteErrorComponent
+    EstudianteErrorComponent,
+    RelacionMateriasComponent,
+    RelacionEstudiantesComponent
   ],
   imports: [
     BrowserModule,

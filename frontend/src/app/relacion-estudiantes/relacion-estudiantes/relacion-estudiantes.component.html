@@ -5,26 +5,17 @@
             class="mt-5 d-flex flex-column align-items-center justify-content-center px-4 py-4" 
             style="width:100%; border:1px solid black"
         >
-            <h2 class="text-center mb-5">Materias del Grupo {{grupo}}</h2>
+            <h2 class="text-center mb-5">Estudiantes del Grupo {{grupo}}</h2>
             <div 
                 class="row" 
-                style="width:100%;" 
-                *ngFor="let relacion of relaciones"
+                style="width:100%;"
             >
-                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3" style="width:100%">
+                <div class="containerDato col-sm-12 col-lg-4 d-flex flex-column align-items-center mb-3"*ngFor="let relacion of relaciones">
                     <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
-                        codigoMateria
+                        codigoEstudiante
                     </div>
                     <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        {{relacion.materia.codigo}}
-                    </div>
-                </div>
-                <div class="containerDato col-sm-12 col-lg-3 d-flex flex-column align-items-center mb-3">
-                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
-                        nombreMateria
-                    </div>
-                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
-                        {{relacion.materia.nombre}}
+                        {{relacion.grupo}}
                     </div>
                 </div>
             </div>

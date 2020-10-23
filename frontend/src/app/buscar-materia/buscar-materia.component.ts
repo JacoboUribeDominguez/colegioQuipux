@@ -22,7 +22,7 @@ export class BuscarMateriaComponent implements OnInit {
     alert('¿Esta seguro que desea eliminar esta materia?');
     this.service.deleteMateria(this.codigo).subscribe(data => {
       alert('Materia eliminada');
-      this.onSubmit();
+      this.NavegarHaciaInicio();
     },
     err =>{
       alert('ERROR: No se pudo eliminar la materia');

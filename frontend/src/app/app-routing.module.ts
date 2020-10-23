@@ -4,10 +4,6 @@ import { AgregarEstudianteComponent } from './agregar-estudiante/agregar-estudia
 import { AgregarGrupoComponent } from './agregar-grupo/agregar-grupo.component';
 import { AgregarMateriaComponent } from './agregar-materia/agregar-materia.component';
 import { BuscarEstudianteComponent } from './buscar-estudiante/buscar-estudiante.component';
-import { EstudiantesGruposComponent as BuscarEstudiantesGruposComponent } from './buscar-grupo/botones/estudiantes-grupos/estudiantes-grupos.component';
-import { MateriasGruposComponent as BuscarMateriasGruposComponent } from './buscar-grupo/botones/materias-grupos/materias-grupos.component';
-import { EstudiantesGruposComponent as VerEstudiantesGruposComponent } from './ver-grupos/botones/estudiantes-grupos/estudiantes-grupos.component';
-import { MateriasGruposComponent as VerMateriasGruposComponent } from './ver-grupos/botones/materias-grupos/materias-grupos.component';
 import { BuscarGrupoComponent } from './buscar-grupo/buscar-grupo.component';
 import { BuscarMateriaComponent } from './buscar-materia/buscar-materia.component';
 import { EditarEstudianteComponent } from './editar-estudiante/editar-estudiante.component';
@@ -21,6 +17,8 @@ import { VerEstudiantesComponent } from './ver-estudiantes/ver-estudiantes.compo
 import { VerGruposComponent } from './ver-grupos/ver-grupos.component';
 import { VerMateriasComponent } from './ver-materias/ver-materias.component';
 import { EstudianteErrorComponent } from './buscar-estudiante/error/estudiante-error/estudiante-error.component';
+import { RelacionMateriasComponent } from './relacion-materias/relacion-materias/relacion-materias.component';
+import { RelacionEstudiantesComponent } from './relacion-estudiantes/relacion-estudiantes/relacion-estudiantes.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
@@ -29,21 +27,21 @@ const routes: Routes = [
   {path: 'agregarEstudiante', component:AgregarEstudianteComponent},
   {path: 'editarEstudiante', component:EditarEstudianteComponent},
   {path: 'eliminarEstudiante', component:EliminarEstudianteComponent}, //endEstudiante
-  {path: 'verGrupos', component:VerGruposComponent},
   {path: 'buscarGrupo', component:BuscarGrupoComponent},
-  {path: 'buscarGrupo/materias-grupos', component:BuscarMateriasGruposComponent},
-  {path: 'buscarGrupo/estudiantes-grupos', component:BuscarEstudiantesGruposComponent},
+  {path: 'verGrupos', component:VerGruposComponent},
   {path: 'agregarGrupo', component:AgregarGrupoComponent},
   {path: 'editarGrupo', component:EditarGrupoComponent},
   {path: 'eliminarGrupo', component:EliminarGrupoComponent}, //endGrupo
   {path: 'verMaterias', component:VerMateriasComponent},
-  {path: 'verGrupo/materias-grupos/:id', component:VerMateriasGruposComponent},
-  {path: 'verGrupo/estudiantes-grupos', component:VerEstudiantesGruposComponent},
   {path: 'buscarMateria', component:BuscarMateriaComponent},
   {path: 'agregarMateria', component:AgregarMateriaComponent},
   {path: 'editarMateria', component:EditarMateriaComponent},
   {path: 'eliminarMateria', component:EliminarMateriaComponent},
-  {path: 'buscarEstudiante-error', component:EstudianteErrorComponent}
+  {path: 'buscarEstudiante-error', component:EstudianteErrorComponent},
+  {path: 'buscarGrupo/materias-grupos/:id', component:RelacionMateriasComponent},
+  {path: 'buscarGrupo/estudiantes-grupos/:id', component:RelacionEstudiantesComponent},
+  {path: 'verGrupo/materias-grupos/:id', component:RelacionMateriasComponent},
+  {path: 'verGrupo/estudiantes-grupos/:id', component:RelacionEstudiantesComponent}
   
 ];
 

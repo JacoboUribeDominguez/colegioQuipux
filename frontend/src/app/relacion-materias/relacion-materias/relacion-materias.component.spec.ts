@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MateriasGruposComponent } from './materias-grupos.component';
+import { RelacionMateriasComponent } from './relacion-materias.component';
 
-describe('MateriasGruposComponent', () => {
-  let component: MateriasGruposComponent;
-  let fixture: ComponentFixture<MateriasGruposComponent>;
+describe('RelacionMateriasComponent', () => {
+  let component: RelacionMateriasComponent;
+  let fixture: ComponentFixture<RelacionMateriasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MateriasGruposComponent ]
+      declarations: [ RelacionMateriasComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MateriasGruposComponent);
+    fixture = TestBed.createComponent(RelacionMateriasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,36 +4,73 @@
             <div class="form-row">
                 <div class="form-group col">
                     <label for="grado">Grado</label>
-                    <select id="grado" class="form-control">
-                        <option selected>Selecciona...</option>
-                        <option value="6" >06</option>
-                        <option value="7" >07</option>
-                        <option value="8" >08</option>
-                        <option value="9" >09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
+                    <select id="grado" class="form-control" name="grado" [(ngModel)]="grado" required>
+                        <option selected>6</option>
+                        <option >7</option>
+                        <option >8</option>
+                        <option >9</option>
+                        <option >10</option>
+                        <option >11</option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-12">
-                    <label for="inputEmail4">Codigo Director Grupo</label>
-                    <input type="number" class="form-control" id="inputEmail4">
+                    <label for="profesor">Codigo Director Grupo</label>
+                    <input type="number" class="form-control" id="profesor" name="profesor" [(ngModel)]="profesor" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail4">Jornada</label>
-                <input type="text" class="form-control" id="inputEmail4">
             </div>
             <div class="form-row">
-                <div class="form-group col-6">
-                    <button type="submit" class="btnAsociar py-2 px-3" style="width:100%">Asociar Estudiantes</button>
-                </div>
-                <div class="form-group col-6">
-                    <button type="submit" class="btnAsociar py-2 px-3" style="width:100%">Asociar Materias</button>
+                <div class="form-group col">
+                    <label for="jornada">Jornada</label>
+                    <select id="jornada" class="form-control" name="jornada" [(ngModel)]="jornada" required>
+                        <option selected>Mañana</option>
+                        <option >Tarde</option>
+                        <option >Noche</option>
+                    </select>
                 </div>
             </div>
-            <button type="submit" class="btnVolver py-2 px-3" style="width:100%">Agregar Estudiante</button>
+            <h3 class="text-center mb-4 mt-2">Asociar Materias</h3>
+            <div class="row my-2 mb-4">
+                <button 
+                    class="col-md-4 py-2 px-2  d-flex justify-content-center align-items-center"
+                    *ngFor="let materia of materiasDisponibles"
+                    (click)="agregarMateria(materia)"
+                    style="border:1px solid #cbcbcb; border-radius: 2.5px; background:none">
+                    {{materia.nombre}}
+                </button>
+            </div>
+            <h3 class="text-center mb-4 mt-2">Materias Asociadas</h3>
+            <div class="row my-2 mb-4">
+                <div *ngIf="materiasSeleccionadasExist != 0" class="text-center" style="width:100%"> No hay materias seleccionadas</div>
+                <button 
+                    class="col-md-4 py-2 px-2  d-flex justify-content-center align-items-center"
+                    *ngFor="let materia of materiasSeleccionadas"
+                    (click)="eliminarMateria(materia)"
+                    style="border:1px solid #cbcbcb; border-radius: 2.5px; background:none">
+                    {{materia.nombre}}
+                </button>
+            </div>
+            <h3 class="text-center mb-4 mt-2">Asociar Estudiantes</h3>
+            <div class="row my-2 mb-4 justify-content-center align-items-center">
+                <div class="form-group col">
+                    <label for="profesor">Codigo Estudiante</label>
+                    <input type="number" class="form-control" id="profesor" name="codigoEstudiante" [(ngModel)]="codigoEstudiante" required>
+                    <button id="btn-asociar" (click)="verificandoEstudianteExiste()" class="btnAsociar py-2 px-3" style="width:100%">Asociar Estudiante</button>
+                </div>
+            </div>
+            <h3 class="text-center mb-4 mt-2">Estudiantes Asociados</h3>
+            <div class="row my-2 mb-4">
+                <div *ngIf="estudianteSeleccionadasExist != 0" class="text-center" style="width:100%"> No hay estudiantes seleccionadas</div>
+                <button 
+                    class="col py-2 px-2  d-flex justify-content-center align-items-center"
+                    *ngFor="let estudiante of estudiantesSeleccionados"
+                    (click)="eliminarEstudiante(estudiante)"
+                    style="border:1px solid #cbcbcb; border-radius: 2.5px; background:none">
+                    {{estudiante.nombre}}
+                </button>
+            </div>
+            <button type="submit" (click)="onCreate()" class="btnVolver py-2 px-3" style="width:100%">Agregar Estudiante</button>
         </form>
         <div class="btnVolver-container d-flex justify-content-center mt-4 mb-4">
             <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>

@@ -1,0 +1,53 @@
+<div class="container mt-5">
+    <div class="veTitleContainer d-flex flex-column align-items-center">
+        <h1>Grupos</h1>
+        <div 
+            class="mt-5 d-flex flex-column align-items-center justify-content-center px-4 py-4" 
+            style="width:100%; border:1px solid black"
+        >
+            <h2 class="text-center mb-5">Materias del Grupo {{grupo}}</h2>
+            <div 
+                class="row" 
+                style="width:100%;"
+            >
+                <div class="containerDato col-sm-12 col-lg-4 d-flex flex-column align-items-center mb-3"*ngFor="let relacion of relaciones">
+                    <div class="card-topData d-flex flex-column justify-content-center text-center text-center p-3">
+                        codigoMateria
+                    </div>
+                    <div class="cardData text-center p-4 d-flex flex-column justify-content-center">
+                        {{relacion.materia}}
+                    </div>
+                </div>
+            </div>
+            <div class="btnVolver-container d-flex justify-content-center mt-4">
+                <button (click)="VolverHaciaGrupos()" class='btnVolver py-2 px-3'>
+                    Volver
+                </button>
+            </div>
+        </div>
+        <div class="mt-5" style="width:100%">
+            <div class="row d-flex justify-content-center" style="width:100%;">
+                <div class="col-md-6 d-flex justify-content-center py-3" style="background:#241a35; color:white;">
+                    CodigoMateria
+                </div>
+                <div class="col-md-6 d-flex justify-content-center py-3" style="background:#241a35; color:white">
+                    NombreMateria
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center" *ngFor="let nombre of nombres" style="width:100%;">
+                <div class="col-md-6 d-flex justify-content-center py-3" style="background:#E3E3E3; border-right:1px solid #C3C3C3;">
+                    {{nombre.codigo}}
+                </div>
+                <div class="col-md-6 d-flex justify-content-center py-3" style="background:#E3E3E3 ">
+                    {{nombre.nombre}}
+                </div>
+                <div class="col-md-6 d-flex justify-content-center py-3" style="background:white; height:45px; border-right:1px solid #C3C3C3;">
+                    
+                </div>
+                <div class="col-md-6 d-flex justify-content-center py-3" style="background:white; height:45px">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

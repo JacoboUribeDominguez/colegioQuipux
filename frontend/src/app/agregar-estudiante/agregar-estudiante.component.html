@@ -4,76 +4,74 @@
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="tipoDocumento">Tipo de Documento</label>
-                    <select id="tipoDocumento" class="form-control">
+                    <select id="tipoDocumento" class="form-control" name="tipodocumento" [(ngModel)]="tipodocumento" required>
                         <option selected>Selecciona...</option>
-                        <option>T.I</option>
-                        <option>Cedula</option>
-                        <option>Documento de extranjero</option>
+                        <option value="TI">T.I</option>
+                        <option value="CC">Cedula de ciudadanía</option>
+                        <option value="CE">Cedula de extranjería</option>
+                        <option value="RC">Registro cívil</option>
                     </select>
                 </div>
                 <div class="form-group col-md-7">
-                    <label for="inputEmail4">Numero de Documento</label>
-                    <input type="number" class="form-control" id="inputEmail4">
+                    <label for="numdocumento">Numero de Documento</label>
+                    <input type="number" class="form-control" id="numdocumento" name="numdocumento" [(ngModel)]="numdocumento" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail4">Nombre</label>
-                <input type="text" class="form-control" id="inputEmail4">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
             </div>
-            <fieldset class="form-group">
+            <fieldset class="form-group" name="genero" required>
                 <div class="row">
                     <legend class="col-form-label col-sm-2 pt-0">Genero</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
+                            <input class="form-check-input" type="radio" name="Masculino" id="Masculino"
+                                value="Masculino" [(ngModel)]="Masculino" checked>
+                            <label class="form-check-label" for="Masculino">
                                 Masculino
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                value="option2">
-                            <label class="form-check-label" for="gridRadios2">
+                            <input class="form-check-input" type="radio" name="Femenino" [(ngModel)]="Femenino" id="Femenino"
+                                value="Femenino">
+                            <label class="form-check-label" for="Femenino">
                                 Femenino
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                value="option2">
-                            <label class="form-check-label" for="gridRadios2">
+                            <input class="form-check-input" type="radio" name="Null" [(ngModel)]="Null" id="Null"
+                                value="Null">
+                            <label class="form-check-label" for="Null">
                                 Otro
                             </label>
                         </div>
                     </div>
                 </div>
             </fieldset>
-            <div class="form-row">
-                <h1>Fecha</h1>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="direccion" required>
             </div>
             <div class="form-group">
-                <label for="inputEmail4">Dirección</label>
-                <input type="text" class="form-control" id="inputEmail4">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" name="ciudad" [(ngModel)]="ciudad" required>
             </div>
             <div class="form-group">
-                <label for="inputEmail4">Ciudad</label>
-                <input type="text" class="form-control" id="inputEmail4">
+                <label for="telefono">Telefono</label>
+                <input type="number" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefono" required>
             </div>
             <div class="form-group">
-                <label for="inputEmail4">Telefono</label>
-                <input type="number" class="form-control" id="inputEmail4">
-            </div>
-            <div class="form-group">
-                <label for="inputEmail4">Celular</label>
-                <input type="number" class="form-control" id="inputEmail4">
+                <label for="celular">Celular</label>
+                <input type="number" class="form-control" id="celular" name="celular" [(ngModel)]="celular" required>
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="correo">Email</label>
+                    <input type="email" class="form-control" id="correo" name="correo" [(ngModel)]="correo" required>
                 </div>
             </div>
-            <button type="submit" class="btnVolver py-2 px-3" style="width:100%">Agregar Estudiante</button>
+            <button type="submit" (click)="onCreate()" class="btnVolver py-2 px-3" style="width:100%">Agregar Estudiante</button>
         </form>
         <div class="btnVolver-container d-flex justify-content-center mt-4 mb-4">
             <button (click)="NavegarHaciaInicio()" class='btnVolver py-2 px-3'>

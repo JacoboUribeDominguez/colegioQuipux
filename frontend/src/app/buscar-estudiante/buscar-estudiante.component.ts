@@ -32,6 +32,17 @@ export class BuscarEstudianteComponent implements OnInit {
     */})
   }
 
+  onDelete(codigo:number){
+    alert('¿Esta seguro que desea eliminar este estudiante?');
+    this.service.deleteEstudiante(codigo).subscribe(data => {
+      alert('Estudiante eliminada');
+      this.NavegarHaciaInicio();
+    },
+    err =>{
+      alert('ERROR: No se pudo eliminar la materia');
+    })
+  }
+
   NavegarHaciaInicio(){
     this.router.navigate(['/']);
   }

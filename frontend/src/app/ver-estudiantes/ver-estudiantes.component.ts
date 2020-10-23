@@ -14,10 +14,26 @@ export class VerEstudiantesComponent implements OnInit {
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(){
+    this.onCharge();
+  }
+
+  onCharge(){
     this.service.getEstudiantes()
     .subscribe(data => {
       this.estudiantes=data;
     });
+  }
+
+  onDelete(codigo:number){
+    alert('¿Esta seguro que desea eliminar este estudiante?');
+    this.service.deleteEstudiante(codigo).subscribe(data => {
+      alert('Estudiante eliminado');
+      this.onCharge();
+      this.NavegarHaciaInicio();
+    },
+    err =>{
+      alert('ERROR: No se pudo eliminar la materia');
+    })
   }
 
   NavegarHaciaInicio(){
